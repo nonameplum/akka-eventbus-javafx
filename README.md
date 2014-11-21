@@ -3,7 +3,7 @@ akka-eventbus-javafx
 
 EventBus for JavaFX using akka framework
 
-Bild and install to local maven using command:
+Build and install to local maven using command:
 ```
 gradle install
 ```
