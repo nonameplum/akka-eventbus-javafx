@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+version = "1.0-SNAPSHOT"
+group = "pl.plum.javafx"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: '2.3.4'
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.11', version: '2.3.4'
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.11.4'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            mavenLocal()
+            pom.version = "1.0-SNAPSHOT"
+            pom.artifactId = "akka-eventbus"
+            pom.groupId = "pl.plum.javafx"
+        }
+    }
+}
